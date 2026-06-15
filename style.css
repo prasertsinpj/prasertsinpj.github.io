@@ -1,0 +1,276 @@
+/* style.css - สไตล์และการตกแต่งทั้งหมดของเว็บไซต์ */
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; 
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header { 
+    background: #004080; 
+    color: #fff; 
+    padding: 1.5rem 0; 
+    text-align: center; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: 1.8rem; 
+}
+
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-top: 10px; 
+}
+
+nav ul li { 
+    display: inline; 
+    margin: 0 15px; 
+}
+
+nav ul li a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s;
+}
+
+nav ul li a:hover { 
+    color: #4dc3ff; 
+}
+
+section { 
+    padding: 60px 20px; 
+    text-align: center; 
+    max-width: 1000px; 
+    margin: auto; 
+    scroll-margin-top: 80px;
+}
+
+#home { 
+    background: #fff; 
+    border-bottom: 1px solid #ddd; 
+    border-radius: 8px 8px 0 0; 
+    margin-top: 20px;
+}
+
+#about { 
+    background: #e6f2ff; 
+    border-bottom: 1px solid #ddd; 
+}
+
+#services { 
+    background: #fff; 
+    border-bottom: 1px solid #ddd; 
+}
+
+#contact { 
+    background: #e6f2ff; 
+    border-radius: 0 0 8px 8px; 
+    margin-bottom: 20px;
+}
+ 
+.service-box { 
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    margin: 15px; 
+    display: inline-block; 
+    width: 40%; 
+    background: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    vertical-align: top;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-box:hover { 
+    transform: translateY(-5px); 
+}
+
+.service-box h3 { 
+    color: #004080; 
+    border-bottom: 2px solid #4dc3ff; 
+    padding-bottom: 10px; 
+    margin-top: 0;
+}
+ 
+.gallery {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 48%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-grow: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#lightbox:after {
+    content: 'คลิกเพื่อปิด';
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+footer { 
+    background: #222; 
+    color: #ccc; 
+    text-align: center; 
+    padding: 15px 0; 
+}
+ 
+.btn-line {
+    display: inline-block; 
+    padding: 12px 25px; 
+    background-color: #00c300; 
+    color: #ffffff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    margin: 10px; 
+    transition: opacity 0.3s;
+}
+
+.btn-line:hover { 
+    opacity: 0.8; 
+}
+
+.btn-fb {
+    display: inline-block; 
+    padding: 12px 25px; 
+    background-color: #1877f2; 
+    color: #ffffff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    margin: 10px; 
+    transition: opacity 0.3s;
+}
+
+.btn-fb:hover { 
+    opacity: 0.8; 
+}
+ 
+.btn-call {
+    display: inline-block; 
+    padding: 12px 25px; 
+    background-color: #ff5722; 
+    color: #ffffff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    margin: 10px; 
+    transition: opacity 0.3s;
+}
+
+.btn-call:hover { 
+    opacity: 0.8; 
+}
+
+.pagination {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 0 5px;
+    background: #fff;
+    border: 1px solid #004080;
+    color: #004080;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.pagination a.active {
+    background: #004080;
+    color: #fff;
+}
+
+.pagination a:hover:not(.active) {
+    background: #e6f2ff;
+}
+
+/* --- Mobile Responsive 🖥️ ➡️ 📱 --- */
+@media (max-width: 768px) {
+    .service-box { 
+        width: 90%; 
+        display: block; 
+        margin: 15px auto; 
+    }
+    
+    .btn-line, .btn-fb, .btn-call { 
+        display: block; 
+        width: 80%; 
+        margin: 10px auto; 
+    }
+     
+    header h1 { 
+        font-size: 1.6rem; 
+    }
+    
+    nav ul {
+        display: flex;
+        width: 100%;
+        padding: 0 10px;
+        margin: 15px 0 0 0;
+        box-sizing: border-box;
+    }
+    
+    nav ul li {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        font-size: 0.95rem;
+        display: block;
+        white-space: nowrap;
+    }
+}
