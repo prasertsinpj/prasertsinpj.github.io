@@ -7,7 +7,7 @@ const servicesData = [
         icon: "⚡",
         title: "บริการตรวจเช็คและเดินสายไฟฟ้า",
         description: "รับเดินสายไฟภายในและภายนอกอาคาร ตรวจเช็คระบบไฟรั่ว ไฟช็อต เพิ่มจุดปลั๊กไฟ และติดตั้งตู้ควบคุมไฟ โดยช่างไฟฟ้ามืออาชีพ",
-        images: ["uploads/elec1.jpg", "uploads/2.jpg"]
+        images: ["uploads/1.jpg", "uploads/2.jpg"]
     },
     {
         id: 2,
